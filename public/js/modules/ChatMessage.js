@@ -10,7 +10,7 @@ export default {
                 <span>{{ msg.message.name }} says:</span>
                 {{ msg.message.content }}
             </li>
-            <button v-on:click="deleteEvent" id="deleteButton">Delete Message</button>
+            <!-- <button @click.prevent="deleteEvent" id="deleteButton">Delete Message</button> -->
         </div>
     `,
 

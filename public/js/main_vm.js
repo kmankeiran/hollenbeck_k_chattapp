@@ -23,12 +23,6 @@ function appendMessage(message) {
     vm.messages.push(message);
 }
 
-
-// function likeMessage() {
-//     console.log('You have liked this message');
-
-// }
-
 const vm = new Vue({
     data: {
         socketID: "",
@@ -41,6 +35,12 @@ const vm = new Vue({
     methods: {
         // emit a message event to the server so that it 
         // can in turn send this to anyone who's connected
+
+        deletePost: function() {
+            vm.messages.splice(-1, 1);
+            console.log(vm.messages);
+        },
+        
         dispatchMessage() {
             //recent edit
             nick=document.querySelector('#nickname').value;
@@ -71,22 +71,10 @@ const vm = new Vue({
     components: {
         newmessage: ChatMessage
     }
+
 }).$mount("#app");
 
-var btn = new Vue({ 
-    el: '#deleteButton',
 
-    data: {
-        name: 'delete'
-    },
-
-    methods: {
-        deleteEvent: function(index) {
-            this.message.splice(index, 1);
-        }, 
-    }
-    
-})
 
 socket.addEventListener('connected', setUserId);
 socket.addEventListener('disconnect', showDisconnectMessage);

@@ -1,7 +1,8 @@
 /* reset */
 
 // sass --watch sass:public/css
-// sass --watch sass main.scss:css/main.css
+// sass --watch sass:main.scss
+// :css/main.css
 
 * {
 	margin: 0; padding: 0; box-sizing: border-box;
@@ -54,7 +55,7 @@ form {
 	input[type=submit] { 
 		width: auto; 
 		padding: 10px; 
-		background-color: rgb(75, 200, 17);
+		background-color: rgb(17, 66, 200);
 		margin-top: 1rem; 
 		border-radius: 8px;
 		color: white;
@@ -68,7 +69,7 @@ form {
 	list-style-type: none; margin: 0; padding: 0;
 
 	li { padding: 5px 10px;	}
-	li:nth-child(odd) { background: black; }
+	li:nth-child(odd) { background: blue; }
 }
 
 // imports
