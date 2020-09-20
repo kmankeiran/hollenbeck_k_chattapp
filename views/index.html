@@ -16,7 +16,7 @@
 
 			<form>
 				<label for="message">Something to say?</label>
-				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
+				<textarea v-model="message" class="message" type="text" placeholder="What do you want to say?" autocomplete="off" id="textarea"></textarea>
 				<input @click.prevent="dispatchMessage" type="submit">
 				<input @click.prevent="deletePost" type="submit" value="delete">
 			</form>
